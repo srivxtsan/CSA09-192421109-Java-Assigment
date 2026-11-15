@@ -1,0 +1,29 @@
+Test                                                 | Expected                 | Actual                   | Result
+-------------------------------------------------------------------------------------------------------------------
+[regression] Car 130 min                             | 90.0                     | 90.0                     | PASS
+[regression] TwoWheeler 130 min                      | 30.0                     | 30.0                     | PASS
+[regression] EV 130 min + 10 kWh                     | 210.0                    | 210.0                    | PASS
+[regression] Car 700 min daily max                   | 240.0                    | 240.0                    | PASS
+E-bike 5 min                                         | 20.0                     | 20.0                     | PASS
+E-bike 600 min (still flat)                          | 20.0                     | 20.0                     | PASS
+E-bike 0 min                                         | 0.0                      | 0.0                      | PASS
+Van 10:00-12:00 (2 peak hours)                       | 120.0                    | 120.0                    | PASS
+Van 08:00-09:00 (off-peak hour)                      | 30.0                     | 30.0                     | PASS
+Van 08:30-10:00 (off-peak + peak)                    | 90.0                     | 90.0                     | PASS
+Van 16:30-18:30 (peak + off-peak)                    | 90.0                     | 90.0                     | PASS
+Van 17:00-18:00 (17:00 is off-peak)                  | 30.0                     | 30.0                     | PASS
+Van 0 minutes                                        | 0.0                      | 0.0                      | PASS
+Visitor + one-day pass (today): free                 | 0.0                      | 0.0                      | PASS
+One-day pass for another day rejected                | IllegalArgumentException | IllegalArgumentException | PASS
+Student cannot use a one-day pass                    | IllegalArgumentException | IllegalArgumentException | PASS
+Staff + valid monthly pass: free                     | 0.0                      | 0.0                      | PASS
+Expired monthly pass rejected                        | IllegalArgumentException | IllegalArgumentException | PASS
+Visitor with monthly pass rejected                   | IllegalArgumentException | IllegalArgumentException | PASS
+Factory: EBIKE                                       | EBike                    | EBike                    | PASS
+Factory: VAN                                         | DeliveryVan              | DeliveryVan              | PASS
+Factory: unknown still rejected                      | IllegalArgumentException | IllegalArgumentException | PASS
+15 allocations over floors {1,2,3,4,5}               | [4, 4]                   | [4, 4]                   | PASS
+16th allocation -> full                              | null                     | null                     | PASS
+Mixed day (20 + 90 + 0 + 120 charging)               | 230.0                    | 230.0                    | PASS
+-------------------------------------------------------------------------------------------------------------------
+PASSED 25  FAILED 0

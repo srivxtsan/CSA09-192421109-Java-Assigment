@@ -1,0 +1,5 @@
+TwoWheeler[TN01A1] 130 min -> Rs 30.0
+Car[TN02B2] 130 min -> Rs 90.0
+EBike[TN09E9] 130 min -> Rs 20.0
+Same regNo added again? true (set size 1)
+Switch version Car 130 min -> Rs 90.0

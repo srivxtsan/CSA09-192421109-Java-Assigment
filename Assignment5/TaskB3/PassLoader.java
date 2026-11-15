@@ -31,8 +31,7 @@ public class PassLoader {
             // execute remaining
             int[] results = ps.executeBatch();
             rowsLoaded += results.length;
-            
-            // TODO 2: Make all inserted rows permanent and return the number of rows loaded
+         
             con.commit();
             return rowsLoaded;
             

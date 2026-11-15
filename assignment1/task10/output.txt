@@ -1,0 +1,8 @@
+Slot[0,0,TN01AB1111]
+Rejected: Duration cannot be negative: -5
+Rejected: Invalid slot 9/0
+Rejected: Slot already occupied
+127 == 127   : true   (cached)
+1000 == 1000 : false  (different objects!)
+1000 equals  : true
+parseInt + 1 : 46

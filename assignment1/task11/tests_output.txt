@@ -1,0 +1,27 @@
+Test                                             | Expected               | Actual                 | Result
+--------------------------------------------------------------------------------------------------------------
+TwoWheeler 130 min                               | 30.0                   | 30.0                   | PASS
+Car 130 min                                      | 90.0                   | 90.0                   | PASS
+EV 130 min + 10 kWh                              | 210.0                  | 210.0                  | PASS
+Zero minutes                                     | 0.0                    | 0.0                    | PASS
+Exactly 60 min (slab boundary)                   | 30.0                   | 30.0                   | PASS
+61 min (just over boundary)                      | 60.0                   | 60.0                   | PASS
+Daily maximum, 700 min                           | 240.0                  | 240.0                  | PASS
+Exactly 24 h (1440 min)                          | 240.0                  | 240.0                  | PASS
+25 h (1500 min)                                  | 270.0                  | 270.0                  | PASS
+Last free slot taken -> next entry               | IllegalStateException  | IllegalStateException  | PASS
+Slot freed after exit, reuse works               | [0, 0]                 | [0, 0]                 | PASS
+Unknown vehicle type                             | IllegalArgumentException | IllegalArgumentException | PASS
+Duplicate registration number                    | IllegalStateException  | IllegalStateException  | PASS
+Invalid slot number release(5,0)                 | false                  | false                  | PASS
+Negative slot release(0,-1)                      | false                  | false                  | PASS
+Visitor with monthly pass                        | IllegalArgumentException | IllegalArgumentException | PASS
+Exit before entry                                | IllegalArgumentException | IllegalArgumentException | PASS
+Exit of unknown vehicle                          | IllegalStateException  | IllegalStateException  | PASS
+Negative minutes                                 | IllegalArgumentException | IllegalArgumentException | PASS
+Equal regNo -> equals true (Car vs EV)           | true                   | true                   | PASS
+Day total (hand = 10+90+180+0+240)               | 520.0                  | 520.0                  | PASS
+Facility totalCollection matches                 | 520.0                  | 520.0                  | PASS
+All slots free at end of day                     | 0                      | 0                      | PASS
+--------------------------------------------------------------------------------------------------------------
+PASSED 23  FAILED 0

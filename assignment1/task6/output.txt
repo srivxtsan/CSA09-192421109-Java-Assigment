@@ -1,0 +1,5 @@
+new ElectricCar("TN03C3", 40):
+1. Vehicle(TN03C3) constructor
+2. Car(TN03C3) constructor
+3. ElectricCar(TN03C3) constructor, battery=40
+ElectricCar/Vehicle TN03C3 [40 kWh] rate=30.0

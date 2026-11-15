@@ -1,0 +1,4 @@
+Charging fee        : 120.0
+Charging fee + GST  : 141.6
+Amount due (Payable): 210.0
+isValidEnergy(500)  : false

@@ -1,0 +1,5 @@
+[static block] counter initialised to 1000
+Tickets: 1001, 1002, 1003
+Active : 3
+Active after exit: 2
+Instance counter bug -> north 1001, south 1001  (DUPLICATE!)

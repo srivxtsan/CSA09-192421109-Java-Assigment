@@ -1,0 +1,5 @@
+n         array O(n) ns/op   ArrayList O(n)     HashMap O(1)      
+1000      3471               1314               71                  (checks 2000/2000/2000)
+10000     12673              13530              196                 (checks 2000/2000/2000)
+100000    133400             166548             406                 (checks 2000/2000/2000)
+Space: array n refs (~4-8 B each), ArrayList n refs + spare capacity (<=1.5x), HashMap n entries (~32+ B each) + table

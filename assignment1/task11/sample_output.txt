@@ -1,0 +1,8 @@
+Commands: ENTER <TWO_WHEELER|CAR|EV> <reg> <STUDENT|STAFF|VISITOR> <true|false> <HH:mm> | EXIT <reg> <HH:mm> <kWh> | QUIT
+Issued Ticket#1001 Car[TN01AB1234] slot[0,0] 2026-11-15T09:00
+Issued Ticket#1002 ElectricCar[TN02EV0001] slot[0,1] 2026-11-15T09:10
+Error: Duplicate registration: TN01AB1234
+Error: Unknown vehicle type: TRUCK
+Fee Rs 90.0
+Fee Rs 120.0
+Total collection Rs 210.0

@@ -1,0 +1,7 @@
+Minutes parked          : 130
+wrongTruncate (int div) : Rs 60.0
+wrongCast               : Rs 60.0
+wrongFraction           : Rs 65.0
+correct (ceiling)       : Rs 90.0
+(int) 3,000,000,000L    : -1294967296  <- silent overflow
+Math.toIntExact        : integer overflow
